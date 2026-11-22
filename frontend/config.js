@@ -1,1 +1,1 @@
-window.API_URL = 'http://localhost:4000';
+window.API_URL = "https://muro-i023.onrender.com";
