@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muro — Demo Full-Stack</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="contenedor">
+    <header>
+      <h1>Muro</h1>
+      <p class="sub">Frontend estático conectado a una API en Node/Express.</p>
+      <div id="estado" class="estado estado-pendiente">Comprobando API...</div>
+    </header>
+
+    <section class="tarjeta">
+      <h2>1. Probar conexión (GET)</h2>
+      <div class="fila">
+        <input id="nombreSaludo" type="text" placeholder="Tu nombre (opcional)" maxlength="30" />
+        <button id="btnSaludo" type="button">Saludar</button>
+      </div>
+      <pre id="salidaSaludo" class="salida">Pulsa "Saludar" para consultar /api/saludo.</pre>
+    </section>
+
+    <section class="tarjeta">
+      <h2>2. Publicar en el muro (POST + GET)</h2>
+      <form id="formMuro" class="apilado">
+        <input id="autor" type="text" placeholder="Tu nombre" maxlength="30" required />
+        <input id="mensaje" type="text" placeholder="Escribe un mensaje (máx. 140 caracteres)" maxlength="140" required />
+        <button type="submit">Publicar</button>
+      </form>
+      <p id="errorMuro" class="error" role="alert"></p>
+      <ul id="listaMuro" class="muro"></ul>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
